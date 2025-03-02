@@ -5,7 +5,7 @@ const reportRoutes=require('./routes/reportRoutes')
 const ngoRegistrationRoutes = require('./routes/ngoRegistrationRoutes');
 
 const dbName=process.env.DBNAME;
-const port=process.env.PORT;
+const port=process.env.PORT || 8080;
 
 connect(dbName);
 const app=express();
