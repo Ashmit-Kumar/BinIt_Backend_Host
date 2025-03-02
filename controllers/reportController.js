@@ -16,7 +16,7 @@ const getReports = async (req, res) => {
 const postReports = async (req, res) => {
     // Proceed with the report creation after successful upload
     try {
-      const { areaType, city, state, pincode, latitude, longitude } = req.body;
+      const { areaType, pollutionPlace, pollutionType, city, state, pincode, latitude, longitude } = req.body;
       const image = req.file ? req.file.location : null; // URL of the image in S3
   
       // Create a new report using the data from the request body
