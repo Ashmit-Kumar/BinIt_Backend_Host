@@ -6,6 +6,16 @@ const reportSchema = new mongoose.Schema({
         enum: ['land', 'water','Land','Water'],
         required: true
     },
+    pollutionPlace:{
+        type: String,
+        enum:['Street', 'Landfill site','Forest and Park' ,'Others','River Banks', 'Seashore','Littoral Zone'],
+        required: true
+    },
+    pollutionType:{
+        type: String,
+        enum:['MicroPlastic','Organic waste','Invasive Aquatic Plants','other','Regular home waste','Oil and Chemical','Agricultural Runoff'],
+        required: true
+    },
     city: {
         type: String,
         required: true

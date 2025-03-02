@@ -22,6 +22,8 @@ const postReports = async (req, res) => {
       // Create a new report using the data from the request body
       const newReport = new Report({
         areaType,
+        pollutionPlace,
+        pollutionType,
         city,
         state,
         pincode,
