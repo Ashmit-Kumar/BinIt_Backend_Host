@@ -3,6 +3,7 @@ require('dotenv').config();
 const connectDB  =require('./db/connectDB')
 const reportRoutes=require('./routes/reportRoutes')
 const ngoRegistrationRoutes = require('./routes/ngoRegistrationRoutes');
+const subscribeRoutes = require('./routes/subscribeRoutes');
 
 const dbName=process.env.DBNAME;
 const port=process.env.PORT || 8080;
@@ -13,7 +14,7 @@ app.use(express.json());
 
 app.use('/reports', reportRoutes);
 app.use('/ngo',ngoRegistrationRoutes);
-
+app.use('/subscribe', subscribeRoutes); 
 
 app.listen(port,()=>{
 console.log(`server is running at http://localhost:${port}`);
