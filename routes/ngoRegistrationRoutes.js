@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const {getNGo, registerNGO} = require('../controllers/ngoController')
-router.get('/', getNGo);
+const {getNGOs, registerNGO} = require('../controllers/ngoController')
+router.get('/', getNGOs);
 router.post('/', registerNGO);
 
 module.exports=router;

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const reportSchema = new mongoose.Schema({
     areaType: {
         type: String,
-        enum: ['land', 'water'],
+        enum: ['land', 'water','Land','Water'],
         required: true
     },
     city: {

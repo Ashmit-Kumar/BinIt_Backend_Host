@@ -1,4 +1,4 @@
-const NGO = require('../models/ngo'); // Import the NGO model
+const NGO = require('../models/ngoSchema'); // Import the NGO model
 
 // Get all NGOs
 const getNGOs = async (req, res) => {

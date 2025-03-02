@@ -1,13 +1,13 @@
 const express = require('express');
 require('dotenv').config();
-const {connect} =require('./db/connectDB')
+const connectDB  =require('./db/connectDB')
 const reportRoutes=require('./routes/reportRoutes')
 const ngoRegistrationRoutes = require('./routes/ngoRegistrationRoutes');
 
 const dbName=process.env.DBNAME;
 const port=process.env.PORT || 8080;
 
-connect(dbName);
+connectDB(dbName);
 const app=express();
 app.use(express.json());
 
