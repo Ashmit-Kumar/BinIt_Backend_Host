@@ -33,6 +33,10 @@ const registerNGO = async (req, res) => {
         res.status(201).json(savedNGO); // Respond with the newly created NGO
     } catch (error) {
         console.log(error);
+        if (error.code === 11000) {
+            return res.status(400).json({ message: 'Registration number or contact already exists!' });
+        }
+
         res.status(500).json({ message: 'Error registering the NGO' }); // Error handling
     }
 };

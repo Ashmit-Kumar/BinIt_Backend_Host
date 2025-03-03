@@ -8,7 +8,8 @@ const ngoSchema = new mongoose.Schema({
     registrationNumber: {
         type: String,
         required: true,
-        unique: true
+        unique: true, // Ensures uniqueness
+        index: true // Explicitly create an index
     },
     address: {
         street: String,
@@ -17,13 +18,13 @@ const ngoSchema = new mongoose.Schema({
         pincode: String
     },
     contact: {
-            type: String,
-            required: true,
-            unique: true
+        type: String,
+        required: true,
+        unique: true, // Ensures uniqueness
+        index: true // Explicitly create an index
     },
     website: {
-        type: String,
-        required: false
+        type: String
     },
     establishedYear: {
         type: Number,
@@ -37,6 +38,10 @@ const ngoSchema = new mongoose.Schema({
         type: String
     }]
 });
+
+// Ensure indexes are created
+// ngoSchema.index({ registrationNumber: 1 }, { unique: true });
+// ngoSchema.index({ contact: 1 }, { unique: true });
 
 const NGO = mongoose.model('NGO', ngoSchema);
 module.exports = NGO;
