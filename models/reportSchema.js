@@ -13,17 +13,18 @@ const reportSchema = new mongoose.Schema({
     },
     pollutionType:{
         type: String,
-        enum:['MicroPlastic','Organic waste','Invasive Aquatic Plants','other','Regular home waste','Oil and Chemical','Agricultural Runoff'],
+        enum:['MicroPlastic','Organic waste','Invasive Aquatic Plants','Other','Regular home waste','Oil and Chemical','Agricultural Runoff','Others','other','others'],
+        required: true
+    },
+    area: {
+        type: String,
         required: true
     },
     city: {
         type: String,
         required: true
     },
-    state: {
-        type: String,
-        required: true
-    },
+   
     pincode: {
         type: String,
         required: true
