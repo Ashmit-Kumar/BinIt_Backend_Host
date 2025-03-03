@@ -17,15 +17,9 @@ const ngoSchema = new mongoose.Schema({
         pincode: String
     },
     contact: {
-        phone: {
-            type: String,
-            required: true
-        },
-        email: {
             type: String,
             required: true,
             unique: true
-        }
     },
     website: {
         type: String,
