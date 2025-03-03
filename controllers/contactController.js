@@ -1,4 +1,4 @@
-const Contact = require('./models/contact'); // Assuming the model is in the models folder
+const Contact = require('../models/contactSchema'); // Assuming the model is in the models folder
 
 // Handle GET request: Get all contacts/complaints
 const getAllContacts = async (req, res) => {
