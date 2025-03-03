@@ -1,4 +1,4 @@
-const Subscription = require('../models/subscriptionModel');
+const Subscription = require('../models/subscriptionSchema');
 
 const subscribe= async (req, res) => {
     const { email } = req.body;

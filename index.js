@@ -5,7 +5,7 @@ const reportRoutes=require('./routes/reportRoutes')
 const ngoRegistrationRoutes = require('./routes/ngoRegistrationRoutes');
 const subscribeRoutes = require('./routes/subscribeRoutes');
 const cors = require('cors');
-
+const contactRoutes= require('./routes/contactRoutes');
 const dbName=process.env.DBNAME;
 const port=process.env.PORT || 8080;
 // CORS configuration
@@ -23,7 +23,7 @@ app.use(cors(corsOptions));
 app.use('/reports', reportRoutes);
 app.use('/ngo',ngoRegistrationRoutes);
 app.use('/subscribe', subscribeRoutes); 
-
+app.use('/contact', contactRoutes);
 app.listen(port,()=>{
 console.log(`server is running at http://localhost:${port}`);
 });

@@ -11,7 +11,6 @@ const contactSchema = new mongoose.Schema(
     email: {
       type: String,
       required: true, // Email is required
-      unique: true,   // Ensure that emails are unique
       lowercase: true, // Convert the email to lowercase
       match: [
         /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, // Simple regex for email validation
