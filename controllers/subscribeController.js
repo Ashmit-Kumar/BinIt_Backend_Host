@@ -23,4 +23,22 @@ const subscribe= async (req, res) => {
         res.status(500).json({ message: "Error subscribing to news" });
     }
 }
-module.exports=subscribe;
+const getSubscribe = async (req, res) => {
+    try {
+        // Fetch all subscriptions from the database
+        const subscriptions = await Subscription.find();
+
+        // If there are no subscriptions
+        if (subscriptions.length === 0) {
+            return res.status(404).json({ message: "No subscriptions found" });
+        }
+
+        // Return the list of subscriptions
+        res.status(200).json({ subscriptions });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Error fetching subscriptions" });
+    }
+};
+
+module.exports={subscribe,getSubscribe};
