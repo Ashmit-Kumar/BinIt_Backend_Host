@@ -10,7 +10,7 @@ const dbName=process.env.DBNAME;
 const port=process.env.PORT || 8080;
 // CORS configuration
 const corsOptions = {
-    origin: ['http://localhost:5174','http://localhost:5173','http://localhost:3000','www.binit.site','binit.site','binit-ruddy.vercel.app'], // Allow only requests from this origin
+    origin: ['http://localhost:5174','http://localhost:5173','http://localhost:3000','https://www.admin.binit.site','https://admin.binit.site','www.binit.site','binit.site','binit-ruddy.vercel.app'], // Allow only requests from this origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
   };
